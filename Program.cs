@@ -27,21 +27,81 @@ public class Product
 
     public Product(string newName, string newDescription, uint newPrice)
     {
-        Random rand = new Random();
-        this.id_code = Convert.ToUInt32(rand.Next(1, 99999999));
-        this.name = newName;
-        this.description = newDescription;
-        this.price = newPrice;
+        this.id_code = this.SetCode();
+        this.SetName(newName);
+        this.SetDescription(newDescription);
+        this.SetPrice(newPrice);
         this.iva = 22;
     }
 
     public Product(string newName, string newDescription, uint newPrice, uint newIva)
     {
+        this.id_code = this.SetCode();
+        this.SetName(newName);
+        this.SetDescription(newDescription);
+        this.SetPrice(newPrice);
+        this.SetIva(newIva);
+    }
+
+    public uint GetCode()
+    {
+        return this.id_code;
+    }
+
+    private uint SetCode()
+    {
         Random rand = new Random();
-        this.id_code = Convert.ToUInt32(rand.Next(1, 99999999));
-        this.name = newName;
-        this.description = newDescription;
-        this.price = newPrice;
-        this.iva = newIva;
+        return Convert.ToUInt32(rand.Next(1, 99999999));
+    }
+
+    public string GetName()
+    {
+        return this.name;
+    }
+
+    public void SetName(string newName)
+    {
+        if (newName.Trim(' ') != "")
+        {
+            this.name = newName;
+        }
+    }
+
+    public string GetDescription()
+    {
+        return this.description;
+    }
+
+    public void SetDescription(string newDescription)
+    {
+        if (newDescription.Trim(' ') != "")
+        {
+            this.description = newDescription;
+        }
+    }
+
+    public uint GetPrice()
+    {
+        return this.price;
+    }
+
+    public void SetPrice(uint newPrice)
+    {
+        if(newPrice != 0)
+        {
+            this.price = newPrice;
+        }
+    }
+    public uint GetIva()
+    {
+        return this.iva;
+    }
+
+    public void SetIva(uint newIva)
+    {
+        if(newIva != 0)
+        {
+            this.iva = newIva;
+        }
     }
 }
