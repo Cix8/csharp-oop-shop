@@ -21,7 +21,7 @@
 
 public class Product
 {
-    private uint id_code;
+    private string id_code;
     private string name;
     private string description;
     private float price;
@@ -45,15 +45,24 @@ public class Product
         this.SetIva(newIva);
     }
 
-    public uint GetCode()
+    public string GetCode()
     {
         return this.id_code;
     }
 
-    private uint SetCode()
+    private string SetCode()
     {
         Random rand = new Random();
-        return Convert.ToUInt32(rand.Next(1, 99999999));
+        uint newCode = Convert.ToUInt32(rand.Next(1, 99999999));
+        string codeAsString = Convert.ToString(newCode);
+        if (codeAsString.Length >= 8) {
+            return Convert.ToString(newCode);
+        }
+        for (int i = codeAsString.Length; i < 8; i++)
+        {
+            codeAsString = '0' + codeAsString;
+        }
+        return codeAsString;
     }
 
     public string GetName()
@@ -115,7 +124,7 @@ public class Product
 
     public string GetFullName()
     {
-        string codeAsString = Convert.ToString(this.id_code);
+        string codeAsString = this.id_code;
         return this.name + '-' + codeAsString;
     }
 }
