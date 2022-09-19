@@ -23,3 +23,5 @@ Product myProduct = new Product("Pizza Margherita", "La classica pizza napoletan
 float myPrice = myProduct.GetPrice();
 
 float myFullPrice = myProduct.GetFullPrice();
+
+string fullProductName = myProduct.GetFullName();

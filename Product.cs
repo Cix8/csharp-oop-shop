@@ -112,4 +112,10 @@ public class Product
             this.iva = newIva;
         }
     }
+
+    public string GetFullName()
+    {
+        string codeAsString = Convert.ToString(this.id_code);
+        return this.name + '-' + codeAsString;
+    }
 }
