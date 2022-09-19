@@ -25,3 +25,27 @@ float myPrice = myProduct.GetPrice();
 float myFullPrice = myProduct.GetFullPrice();
 
 string fullProductName = myProduct.GetFullName();
+
+string productName = myProduct.GetName();
+
+myProduct.SetName("Pizza Diavola");
+
+myProduct.SetName("");
+
+string productDescription = myProduct.GetDescription();
+
+myProduct.SetDescription("Per gli amanti del piccante");
+
+myProduct.SetDescription("        ");
+
+myProduct.SetPrice(2);
+
+myProduct.SetPrice(0);
+
+myProduct.SetPrice(-1);
+
+uint productIva = myProduct.GetIva();
+
+myProduct.SetIva(21);
+
+myProduct.SetIva(0);
