@@ -52,6 +52,8 @@ myProduct.SetIva(0);
 
 Water myWater = new Water("Fontenoce", "Acqua", 1.99, 22, 1.5, 7, "Bocca di Piazza");
 
+Wine myWine = new Wine("Lambrusco", "Lambrusco Mantovano DOC", 14.99, 22, 0.75, 14, "Cantina Sociale Quistello");
+
 try
 {
     CannedFood myFood = new CannedFood("test", "test", 1.99, 22, 400, "22-10-2023", "22-09-2021");
