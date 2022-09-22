@@ -19,7 +19,7 @@
 
 
 
-public class Product
+public abstract class Product
 {
     private string id_code;
     private string name;

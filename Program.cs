@@ -18,37 +18,37 @@
 //BONUS: create un metodo che restituisca il codice con un pad left di 0 per arrivare a 8 caratteri (ad esempio codice 91 diventa 00000091, mentre codice 123445567 resta come è)
 
 
-Product myProduct = new Product("Pizza Margherita", "La classica pizza napoletana", 4.99);
+//Product myProduct = new Product("Pizza Margherita", "La classica pizza napoletana", 4.99);
 
-float myPrice = myProduct.GetPrice();
+//float myPrice = myProduct.GetPrice();
 
-float myFullPrice = myProduct.GetFullPrice();
+//float myFullPrice = myProduct.GetFullPrice();
 
-string fullProductName = myProduct.GetFullName();
+//string fullProductName = myProduct.GetFullName();
 
-string productName = myProduct.GetName();
+//string productName = myProduct.GetName();
 
-myProduct.SetName("Pizza Diavola");
+//myProduct.SetName("Pizza Diavola");
 
-myProduct.SetName("");
+//myProduct.SetName("");
 
-string productDescription = myProduct.GetDescription();
+//string productDescription = myProduct.GetDescription();
 
-myProduct.SetDescription("Per gli amanti del piccante");
+//myProduct.SetDescription("Per gli amanti del piccante");
 
-myProduct.SetDescription("        ");
+//myProduct.SetDescription("        ");
 
-myProduct.SetPrice(2);
+//myProduct.SetPrice(2);
 
-myProduct.SetPrice(0);
+//myProduct.SetPrice(0);
 
-myProduct.SetPrice(-1);
+//myProduct.SetPrice(-1);
 
-uint productIva = myProduct.GetIva();
+//uint productIva = myProduct.GetIva();
 
-myProduct.SetIva(21);
+//myProduct.SetIva(21);
 
-myProduct.SetIva(0);
+//myProduct.SetIva(0);
 
 Water myWater = new Water("Fontenoce", "Acqua", 1.99, 22, 1.5, 7, "Bocca di Piazza");
 
@@ -68,6 +68,7 @@ try
 {
     CannedFood myFood = new CannedFood("test", "test", 1.99, 22, 200, "22-10-2023", "22-09-2021");
     Console.WriteLine("Prodotto creato correttamente!");
+    Console.WriteLine(myFood.GetFullName());
 }
 catch (Exception e)
 {
@@ -76,7 +77,6 @@ catch (Exception e)
 
 try
 {
-    Console.WriteLine(myProduct.GetFullName());
     Console.WriteLine(myWater.GetFullName());
     myWater.Drink(1);
     Console.WriteLine("Litri: " + myWater.Quantity);
