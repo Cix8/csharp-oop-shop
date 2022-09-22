@@ -1,6 +1,6 @@
-﻿public class CannedFood : Product
+﻿public class CannedFood : Product, LimitedCapcity
 {
-    public int MaxCapacity { get; } = 300;
+    public float MaxCapacity { get; } = 300;
     public int Quantity { get; private set; }
     public DateOnly ExpirationDate { get; private set; }
     public DateOnly ProductionDate { get; private set; }

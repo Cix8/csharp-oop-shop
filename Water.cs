@@ -1,13 +1,13 @@
-﻿public class Water : Product
+﻿public class Water : Product, Liquid, LimitedCapcity
 {
 
-    private float maxCapacity = 1.5F;
+    public float MaxCapacity { get; } = 1.5F;
     public float Quantity { get; private set; }
     public float Ph { get; private set; }
     public string WaterSource { get; private set; }
     public Water(string newName, string newDescription, double newPrice, uint newIva, double newQuantity, double newPh, string waterSource) : base(newName, newDescription, newPrice, newIva)
     {
-        if (newQuantity <= this.maxCapacity)
+        if (newQuantity <= this.MaxCapacity)
         {
             this.Quantity = (float)newQuantity;
         }
@@ -46,7 +46,7 @@
     public void Fill(double thisQuantity)
     {
         float floatQuantity = (float)thisQuantity;
-        if(floatQuantity + this.Quantity <= this.maxCapacity)
+        if(floatQuantity + this.Quantity <= this.MaxCapacity)
         {
             this.Quantity += floatQuantity;
         } else

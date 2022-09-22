@@ -1,6 +1,6 @@
-﻿public class FruitBag : Product
+﻿public class FruitBag : Product, LimitedCapcity
 {
-    public int MaxCapacity { get; } = 5;
+    public float MaxCapacity { get; } = 5;
     public int Quantity { get; private set; }
     public DateOnly ExpirationDate { get; private set; }
     public DateOnly ProductionDate { get; private set; }
