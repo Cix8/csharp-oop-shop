@@ -49,3 +49,26 @@ uint productIva = myProduct.GetIva();
 myProduct.SetIva(21);
 
 myProduct.SetIva(0);
+
+Water myWater = new Water("Fontenoce", "Acqua", 1.99, 22, 1.5, 7, "Bocca di Piazza");
+
+try
+{
+    Console.WriteLine(myProduct.GetFullName());
+    Console.WriteLine(myWater.GetFullName());
+    myWater.Drink(1);
+    Console.WriteLine("Litri: " + myWater.Quantity);
+    Console.WriteLine("Galloni: " + Water.ToGallons(myWater.Quantity));
+    myWater.Drink(0.5);
+    Console.WriteLine("Litri: " + myWater.Quantity);
+    myWater.Fill(1);
+    Console.WriteLine("Litri: " + myWater.Quantity);
+    Console.WriteLine("Galloni: " + Water.ToGallons(myWater.Quantity));
+    myWater.Empty();
+    Console.WriteLine("Litri: " + myWater.Quantity);
+    myWater.Drink(0.1);
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
+}
