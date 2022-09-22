@@ -122,7 +122,7 @@ public class Product
         }
     }
 
-    public string GetFullName()
+    public virtual string GetFullName()
     {
         return this.id_code + " - " + this.name;
     }

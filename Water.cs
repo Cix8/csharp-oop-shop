@@ -60,7 +60,7 @@
         this.Quantity = 0;
     }
 
-    public string GetFullName()
+    public override string GetFullName()
     {
         return $"{this.GetCode()} - {this.GetName()} - Sorgente: {this.WaterSource} - PH: {this.Ph} - Litri: {this.Quantity}";
     }
