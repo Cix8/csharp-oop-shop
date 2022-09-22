@@ -124,7 +124,6 @@ public class Product
 
     public string GetFullName()
     {
-        string codeAsString = this.id_code;
-        return this.name + '-' + codeAsString;
+        return this.name + '-' + this.id_code;
     }
 }
