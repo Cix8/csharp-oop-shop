@@ -1,4 +1,4 @@
-﻿public class Water : Product, Liquid, LimitedCapcity
+﻿public class Water : Product, ILiquid, ILimitedCapacity
 {
 
     public float MaxCapacity { get; } = 1.5F;

@@ -1,4 +1,4 @@
-﻿public class FruitBag : Product, LimitedCapcity
+﻿public class FruitBag : Product, ILimitedCapacity
 {
     public float MaxCapacity { get; } = 5;
     public int Quantity { get; private set; }
@@ -10,6 +10,10 @@
         if (quantity <= this.MaxCapacity)
         {
             this.Quantity = quantity;
+        }
+        else
+        {
+            throw new Exception("La capacità inserita supera la capacità massima!");
         }
 
         this. ExpirationDate = DateOnly.Parse(expirationDate);

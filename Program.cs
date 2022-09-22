@@ -54,6 +54,26 @@ Water myWater = new Water("Fontenoce", "Acqua", 1.99, 22, 1.5, 7, "Bocca di Piaz
 
 try
 {
+    CannedFood myFood = new CannedFood("test", "test", 1.99, 22, 400, "22-10-2023", "22-09-2021");
+} catch(Exception e)
+{
+    Console.WriteLine(e.Message);
+}
+
+Console.WriteLine();
+
+try
+{
+    CannedFood myFood = new CannedFood("test", "test", 1.99, 22, 200, "22-10-2023", "22-09-2021");
+    Console.WriteLine("Prodotto creato correttamente!");
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
+}
+
+try
+{
     Console.WriteLine(myProduct.GetFullName());
     Console.WriteLine(myWater.GetFullName());
     myWater.Drink(1);

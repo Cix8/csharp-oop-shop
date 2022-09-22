@@ -1,4 +1,4 @@
-﻿public interface LimitedCapcity
+﻿public interface ILimitedCapacity
 {
     public float MaxCapacity { get; }
 }

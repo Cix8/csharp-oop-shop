@@ -1,4 +1,4 @@
-﻿public class CannedFood : Product, LimitedCapcity
+﻿public class CannedFood : Product, ILimitedCapacity
 {
     public float MaxCapacity { get; } = 300;
     public int Quantity { get; private set; }
@@ -10,6 +10,9 @@
         if (quantity <= 300)
         {
             this.Quantity = quantity;
+        } else
+        {
+            throw new Exception("La capacità inserita supera la capacità massima!");
         }
 
         this.ExpirationDate = DateOnly.Parse(expirationDate);
